@@ -1,9 +1,3 @@
-//
-//  Badge.swift
-//  Landmarks
-//
-//  Created by Danish Phiroz on 5/29/25.
-//
 
 import SwiftUI
 
