@@ -8,7 +8,7 @@ You’ll learn how to build and compose custom SwiftUI views, apply modifiers, a
 ## 🚀 Topics covered
 
 1. SwiftUI essentials: Creating and combining views
-2. Building lists and navigation
-3. Handling user input
-4. Drawing paths and shapes
+2. SwiftUI essentials: Building lists and navigation
+3. SwiftUI essentials: Handling user input
+4. Drawing and animation: Drawing paths and shapes
 
