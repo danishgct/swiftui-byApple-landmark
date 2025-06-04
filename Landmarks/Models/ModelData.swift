@@ -31,4 +31,5 @@ func load<T: Decodable>(_ fileName: String) -> T {
 @Observable
 class ModelData {
     var landmarks: [Landmark] = load("landmarkData")
+    var hikes: [Hike] = load("hikeData")
 }
