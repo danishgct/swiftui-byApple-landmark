@@ -7,6 +7,14 @@
 
 import SwiftUI
 
+extension Animation {
+    static func ripple(index: Int) -> Animation {
+        Animation.spring(dampingFraction: 0.5)
+                    .speed(2)
+                    .delay(0.03 * Double(index))
+    }
+}
+
 struct HikeGraph: View {
     var hike: Hike
     // KeyPath to select which Range<Double> metric (e.g., elevation, heart rate, pace) to plot
@@ -33,7 +41,7 @@ struct HikeGraph: View {
         //Overall Range
         let overallRange = rangeOfRanges(data.lazy.map { $0[keyPath: path] })
         let maxMagnitude = data.map { magnitude(of: $0[keyPath: path]) }.max()!
-        //let heightRation = 1 - CGFloat(maxMagnitude / magnitude(of: overallRange))
+        let heightRatio = 1 - CGFloat(maxMagnitude / magnitude(of: overallRange))
         
         GeometryReader { proxy in
             HStack(alignment: .center, spacing: proxy.size.width / 120) {
@@ -43,6 +51,7 @@ struct HikeGraph: View {
                                  height: proxy.size.height,
                                  range: observation[keyPath: path],
                                  overallRange: overallRange)
+                    .animation(.ripple(index: index))
                 }
             }
         }

@@ -16,7 +16,7 @@ extension AnyTransition {
 
 struct HikeView: View {
     let hike: Hike
-    @State private var showDetails = false
+    @State private var showDetails = true
     
     var body: some View {
         VStack {
