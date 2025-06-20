@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Playgrounds
 
 func load<T: Decodable>(_ fileName: String) -> T {
     let data: Data
@@ -32,4 +33,8 @@ func load<T: Decodable>(_ fileName: String) -> T {
 class ModelData {
     var landmarks: [Landmark] = load("landmarkData")
     var hikes: [Hike] = load("hikeData")
+}
+
+#Playground {
+    let landmark = ModelData().landmarks[0]
 }
