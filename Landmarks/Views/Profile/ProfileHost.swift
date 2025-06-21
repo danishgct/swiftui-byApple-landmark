@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct ProfileHost: View {
+    @State private var draftProfile = Profile.default
+    
     var body: some View {
-        Text("Hello, World!")
+        VStack(alignment:.leading, spacing: 20) {
+            ProfileSummary(profile: draftProfile)
+        }
+        .padding()
     }
 }
 

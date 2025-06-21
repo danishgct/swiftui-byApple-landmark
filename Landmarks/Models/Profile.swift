@@ -8,12 +8,12 @@
 import Foundation
 
 struct Profile {
-    let userName: String
+    let username: String
     var prefersNotifications = false
     var seasonalPhoto = Season.winter
     var goalDate = Date()
     
-    static let `default`: Profile = .init(userName: "g_kumar")
+    static let `default`: Profile = .init(username: "g_kumar")
     
     enum Season: String, CaseIterable, Identifiable {
         case spring = "🌷"
