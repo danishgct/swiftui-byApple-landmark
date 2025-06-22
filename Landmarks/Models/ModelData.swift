@@ -35,6 +35,7 @@ func load<T: Decodable>(_ fileName: String) -> T {
 class ModelData {
     var landmarks: [Landmark] = load("landmarkData") // Load the landmark data into an array
     var hikes: [Hike] = load("hikeData") // Load the hike data into an array
+    var profile = Profile.default
     
     // Computed property to group landmarks by category
     var categories:[String: [Landmark]] {

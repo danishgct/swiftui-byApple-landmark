@@ -26,6 +26,7 @@ struct CategoryHome: View {
                 }
                 .listRowInsets(EdgeInsets()) //Set the edge insets to zero on both kinds of landmark previews so the content can extend to the edges of the display.
             }
+            .listStyle(.inset)
             .navigationTitle("Featured")
             .toolbar {
                 Button {
